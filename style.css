@@ -1,0 +1,235 @@
+/* Global Styles */
+:root {
+    --color-primary: #6a0dad;
+    --color-secondary: #ff69b4;
+    --color-accent: #87ceeb;
+    --color-dark: #333333;
+    --color-light: #ffffff;
+    --color-gray: #f8f9fa;
+    --gradient-primary: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    --gradient-secondary: linear-gradient(45deg, var(--color-secondary), var(--color-accent));
+    --gradient-accent: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    margin-left: 1.5rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 150px 0 100px;
+    background-color: var(--color-gray);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.05);
+    border-radius: 50%;
+}
+
+/* Services Section */
+.services-section {
+    padding: 100px 0;
+}
+
+.service-card {
+    background: var(--color-light);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card .icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--gradient-secondary);
+    color: var(--color-light);
+    font-size: 2rem;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 0;
+    background-color: var(--color-gray);
+}
+
+.skill-item {
+    margin-bottom: 2.5rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background: var(--gradient-primary);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 100px 0;
+}
+
+.portfolio-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-content {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-content {
+    bottom: 0;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 100px 0;
+    background-color: var(--color-gray);
+}
+
+.testimonial-card {
+    background: var(--color-light);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+}
+
+.contact-form {
+    background: var(--color-light);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 2rem 0;
+}
+
+.social-links a {
+    color: var(--color-light);
+    margin-left: 1rem;
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 120px 0 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+
+    .service-card, .portfolio-card, .testimonial-card {
+        margin-bottom: 2rem;
+    }
+}
